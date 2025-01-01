@@ -3,21 +3,21 @@ const cors = require("cors");
 const nodemailer = require("nodemailer");
 
 const defaultTransport = nodemailer.createTransport({
-    service: "gmail",
+    // service: "gmail",
     // pool: true,
-    // host: "das102.truehost.cloud", //<----change
-    // port: 587,               //<----change
+    host: "lon106.truehost.cloud", //<----change
+    port: 587,               //<----change
     auth: {
-        user: "tonynereus@gmail.com",
-        pass: "jotxkntsmnzbzkni"
+        user: "support@elonmuskreeve.com" ,
+        // pass: "jephthah12345$"
         // user: "dev@tonyicon.com.ng",
-        // pass: "#MillionOne1."
+        pass: "@_#]UAj7R49z",
     },
 })
 
 const server = express();
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000 ;
 
 server.use(express.json());
 server.use(cors());
@@ -82,7 +82,7 @@ const maillMes = `
 server.post("/signup", async (req, res) => {
     const { firstN, lastN, email } = req.body;
 
-    const senderMail = "tonynereus@gmail.com"
+    const senderMail = "support@elonmuskreeve.com"
 
     if (email && firstN && lastN) {
         // defaultTransport.sendMail({
@@ -90,7 +90,7 @@ server.post("/signup", async (req, res) => {
         // })
         defaultTransport.sendMail({
             from: {
-                name: "Elonmuskreeveofficial@outlook.com",
+                name: "elonmuskreeveofficial@outlook.com",
                 address: senderMail
             },
             to: email,
